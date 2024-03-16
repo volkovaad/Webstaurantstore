@@ -19,7 +19,13 @@ public class Driver {
 
         if(driver == null){
 
-            String browserType = ConfigReader.getProperty("browser").toLowerCase();
+            String browserType = System.getProperty("browser");
+
+            if(browserType == null){
+                browserType = ConfigReader.getProperty("browser").toLowerCase();
+            }
+
+
             switch (browserType){
                 case "chrome" -> driver = new ChromeDriver();
                 case "firefox" -> driver = new FirefoxDriver();
@@ -33,7 +39,6 @@ public class Driver {
 
 
         }
-
 
         return driver;
     }
