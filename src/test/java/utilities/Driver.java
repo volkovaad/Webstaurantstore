@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.Collection;
+
 public class Driver {
 
     private static WebDriver driver;
@@ -51,4 +53,5 @@ public class Driver {
         }
 
     }
+
 }
