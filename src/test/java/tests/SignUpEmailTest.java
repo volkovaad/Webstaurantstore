@@ -11,6 +11,7 @@ public class SignUpEmailTest extends TestBase{
 
     @Test (groups = "smoke")
     public void testSignUpEmail() throws InterruptedException {
+        logger.info("Email Sign Up Verification");
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Driver.getDriver().findElement(By.id("emailaddress")).sendKeys((ConfigReader.getProperty("username")), Keys.TAB, Keys.ENTER);
 
