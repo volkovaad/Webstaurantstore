@@ -10,6 +10,7 @@ public class ShippingAndDeliveryTest extends TestBase{
 
     @Test (groups = "smoke")
     public void testShippingAndDeliveryLink() throws InterruptedException {
+        logger.info("Shipping & Delivery TextLink Verification");
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Driver.getDriver().findElement(By.partialLinkText("Shipping & Delivery")).click();
 
