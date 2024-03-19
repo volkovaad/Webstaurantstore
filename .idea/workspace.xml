@@ -54,25 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "BranchAllan",
-    "last_opened_file_path": "C:/Users/Allan/IdeaProjects",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BranchAllan&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Allan/IdeaProjects&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="tests" />
@@ -85,11 +85,17 @@
       <recent name="utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SignUpEmailTest">
-    <configuration name="C:/Users/Allan/IdeaProjects/Webstaurantstore/smoke.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="weborders-tdd-framework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/smoke.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+  <component name="RunManager" selected="TestNG.HelpCenterLinkTest">
+    <configuration name="HelpCenterLinkTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HelpCenterLinkTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -108,6 +114,22 @@
       <option name="MAIN_CLASS_NAME" value="tests.HelpCenterLinkTest" />
       <option name="METHOD_NAME" value="testHelpCenterLink" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShippingAndDeliveryTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ShippingAndDeliveryTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -148,31 +170,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignUpEmailTest.testSignUpEmail" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="weborders-tdd-framework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SignUpEmailTest" />
-      <option name="METHOD_NAME" value="testSignUpEmail" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.HelpCenterLinkTest" />
+        <item itemvalue="TestNG.ShippingAndDeliveryTest" />
         <item itemvalue="TestNG.SignUpEmailTest" />
         <item itemvalue="TestNG.ShippingAndDeliveryTest.testShippingAndDeliveryLink" />
         <item itemvalue="TestNG.HelpCenterLinkTest.testHelpCenterLink" />
-        <item itemvalue="TestNG.C:/Users/Allan/IdeaProjects/Webstaurantstore/smoke.xml" />
-        <item itemvalue="TestNG.SignUpEmailTest.testSignUpEmail" />
       </list>
     </recent_temporary>
   </component>
