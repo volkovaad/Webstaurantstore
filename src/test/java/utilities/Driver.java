@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,7 +14,7 @@ import java.util.Collection;
 
 public class Driver {
 
-    private static WebDriver driver;
+    public static WebDriver driver;
 
     private Driver(){}
 
@@ -54,4 +55,6 @@ public class Driver {
 
     }
 
+    public static void findElement(By xpath) {
+    }
 }
