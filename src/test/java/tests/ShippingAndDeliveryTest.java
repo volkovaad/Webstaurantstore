@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class ShippingAndDeliveryTest extends TestBase{
 
-    @Test
+    @Test (groups = "smoke")
     public void testShippingAndDeliveryLink() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Driver.getDriver().findElement(By.partialLinkText("Shipping & Delivery")).click();

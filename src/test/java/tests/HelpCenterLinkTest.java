@@ -9,7 +9,7 @@ import utilities.Driver;
 
 public class HelpCenterLinkTest extends TestBase{
 
-   @Test
+   @Test (groups = "smoke")
     public void testHelpCenterLink() throws InterruptedException {
             Driver.getDriver().get(ConfigReader.getProperty("url"));
             Driver.getDriver().findElement(By.partialLinkText("Help Center")).click();
