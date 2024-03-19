@@ -13,6 +13,8 @@ public class WeeklySalesTest2 extends TestBase{
     @Test(groups = "smoke")
     public void test() throws InterruptedException {
 
+        logger.info("Weekly Sales Dropdown Price: Low to High Verification");
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         Driver.getDriver().findElement(By.partialLinkText("Weekly Sales")).click();

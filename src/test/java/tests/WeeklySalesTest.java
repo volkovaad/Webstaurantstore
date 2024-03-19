@@ -12,6 +12,8 @@ public class WeeklySalesTest extends TestBase{
     @Test(groups = "smoke")
     public void test() throws InterruptedException {
 
+        logger.info("Weekly Sales Link Verification");
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         Driver.getDriver().findElement(By.partialLinkText("Weekly Sales")).click();

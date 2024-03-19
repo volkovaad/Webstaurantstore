@@ -11,6 +11,8 @@ public class SavingWithPlusTest extends TestBase{
     @Test(groups = "smoke")
     public void test() throws InterruptedException{
 
+        logger.info("Savings with Plus Link Verification");
+
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         Driver.getDriver().findElement(By.partialLinkText("Start saving with Plus")).click();
