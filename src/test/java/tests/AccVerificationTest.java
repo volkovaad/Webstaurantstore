@@ -16,7 +16,7 @@ public class AccVerificationTest extends TestBase {
         LogIn loginPage = new LogIn();
         loginPage.signIn();
         loginPage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
-        Thread.sleep(1000);
+        Thread.sleep(10000);
         Assert.assertTrue(loginPage.getDashboardName().contains(loginPage.getLogoName()));
 
     }

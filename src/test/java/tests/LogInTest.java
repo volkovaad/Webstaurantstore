@@ -1,6 +1,10 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LogIn;
@@ -8,6 +12,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.io.IOException;
+import java.time.Duration;
 
 public class LogInTest extends TestBase {
 
@@ -19,8 +24,12 @@ public class LogInTest extends TestBase {
         LogIn loginPage = new LogIn();
         loginPage.signIn();
         loginPage.login(ConfigReader.getProperty("username"), ConfigReader.getProperty("password"));
-        Thread.sleep(1000);
-        Assert.assertTrue(Driver.getDriver().getPageSource().contains("Account Dashboard"));
+       // Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        WebElement accountDashboardElement = wait.until(ExpectedConditions.visibilityOf(loginPage.getAccountDashboard()));
+        Assert.assertTrue(accountDashboardElement.isDisplayed());
+
+       // Assert.assertTrue(Driver.getDriver().getPageSource().contains("Account Dashboard"));
     }
     @Test
     public void testInvalidCredentialsNoUsername() throws InterruptedException {
