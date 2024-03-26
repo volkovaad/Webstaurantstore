@@ -6,7 +6,6 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import static utilities.Driver.driver;
 
 public class ClickableBanners extends TestBase{
     @Test(groups = "smoke")
@@ -15,9 +14,9 @@ public class ClickableBanners extends TestBase{
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
-        driver.findElement(By.cssSelector("div.gtm-promo.mini-advertisements.group"));
+        Driver.getDriver().findElement(By.cssSelector("div.gtm-promo.mini-advertisements.group"));
 
-        Assert.assertTrue(driver.findElement(By.cssSelector("div.gtm-promo.mini-advertisements.group")).findElements(By.tagName("a")).size() > 0);
+        Assert.assertTrue(Driver.getDriver().findElement(By.cssSelector("div.gtm-promo.mini-advertisements.group")).findElements(By.tagName("a")).size() > 0);
 
         Thread.sleep(1000);
 

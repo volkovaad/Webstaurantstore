@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import static utilities.Driver.driver;
+
 
 
 public class PriceTest extends TestBase{
@@ -18,11 +18,11 @@ public class PriceTest extends TestBase{
 
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
-        driver.findElement(By.id("searchval")).sendKeys("Smallwares", Keys.ENTER);
+        Driver.getDriver().findElement(By.id("searchval")).sendKeys("Smallwares", Keys.ENTER);
 
-        driver.findElement(By.xpath("//option[@value='price_asc']")).click();
+        Driver.getDriver().findElement(By.xpath("//option[@value='price_asc']")).click();
 Thread.sleep(1000);
-   Assert.assertTrue(driver.findElements(By.xpath("//option[@value='price_asc']")).size() > 0);
+   Assert.assertTrue(Driver.getDriver().findElements(By.xpath("//option[@value='price_asc']")).size() > 0);
         }
     }
 

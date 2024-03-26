@@ -10,7 +10,6 @@ import utilities.Driver;
 
 import java.util.List;
 
-import static utilities.Driver.driver;
 
 public class SearchProductTest extends TestBase {
 
@@ -21,9 +20,9 @@ public class SearchProductTest extends TestBase {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
 
 
-       driver.findElement(By.id("searchval")).sendKeys("Smallwares", Keys.ENTER);
+        Driver.getDriver().findElement(By.id("searchval")).sendKeys("Smallwares", Keys.ENTER);
 
-        Assert.assertTrue(driver.findElement(By.className("search__wrap")).getText().contains("smallwares"));
+        Assert.assertTrue(Driver.getDriver().findElement(By.className("search__wrap")).getText().contains("smallwares"));
 
         Thread.sleep(1000);
     }}

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import static utilities.Driver.driver;
+
 
 public class SourceCodeTest extends TestBase {
 
@@ -19,12 +19,12 @@ public class SourceCodeTest extends TestBase {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
       logger.info("Checking Plus page source");
 
-        WebElement tabletopLink = driver.findElement(By.linkText("Tabletop"));
+        WebElement tabletopLink = Driver.getDriver().findElement(By.linkText("Tabletop"));
         tabletopLink.click();
-        WebElement plusLink = driver.findElement(By.cssSelector("[clip-rule='evenodd']"));
+        WebElement plusLink = Driver.getDriver().findElement(By.cssSelector("[clip-rule='evenodd']"));
         plusLink.click();
         Thread.sleep(1000);
-        String pageSource = (String)((JavascriptExecutor)driver).executeScript("return document.documentElement.outerHTML");
+        String pageSource = (String)((JavascriptExecutor)Driver.getDriver()).executeScript("return document.documentElement.outerHTML");
 
         Assert.assertTrue(pageSource.contains("Free shipping on orders over $29"));
         Assert.assertTrue(pageSource.contains("Expedited order processing"));

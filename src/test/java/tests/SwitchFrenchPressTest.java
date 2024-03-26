@@ -8,7 +8,7 @@ import tests.TestBase;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-import static utilities.Driver.driver;
+
 
 public class SwitchFrenchPressTest extends TestBase {
     @Test(groups = "smoke")
@@ -16,15 +16,15 @@ public class SwitchFrenchPressTest extends TestBase {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
           logger.info("Check list and grid view");
 
-         driver.findElement(By.linkText("Tabletop")).click();
+        Driver.getDriver().findElement(By.linkText("Tabletop")).click();
 
 
         Driver.getDriver().findElement(By.xpath("//img[@alt='French Presses']")).click();
 
         Thread.sleep(1000);
-       driver.findElement(By.cssSelector("[aria-label='Switch to Grid view']")).click();
+        Driver.getDriver().findElement(By.cssSelector("[aria-label='Switch to Grid view']")).click();
         Thread.sleep(1000);
-        driver.findElement(By.cssSelector("[aria-label='Switch to List view']")).click();
+        Driver.getDriver().findElement(By.cssSelector("[aria-label='Switch to List view']")).click();
        Thread.sleep(1000);
         Assert.assertTrue(true, "Grid and List views are successfully switched.");
     }
