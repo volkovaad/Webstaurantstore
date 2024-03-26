@@ -16,8 +16,24 @@ public class Disposables extends TestBase{
         categoryPage.clickCategoryLink("Disposables");
         categoryPage.hoverOverCategoryLink("Disposables");
         categoryPage.clickCategoryLink("Shop All");
+    }
+    @Test(groups = "regression")
+    public void test2(){
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+//        SeleniumUtils.jsClick(Driver.getDriver().findElement(By.xpath("//button[text()='Accept']")));
+        CategoryPage categoryPage = new CategoryPage();
+
+        categoryPage.clickCategoryLink("Disposables");
+
+        categoryPage.topProductsQuantity("2");
+
+        categoryPage.addToCartTopProduct();
+
+
+
 
     }
+
 
 
 
