@@ -22,6 +22,8 @@ public class LockersCompareProductsTest extends TestBase{
         LockersPage.getCompareProduct2().click();
         LockersPage.getCompareProductsResult().click();
 
+        Thread.sleep(1000);
+
         Assert.assertTrue(Driver.getDriver().getPageSource().contains("Compare Products"));
 }
 }
