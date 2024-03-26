@@ -27,6 +27,16 @@ public class Lockers {
     @FindBy(partialLinkText = "Eligible")
     private WebElement PlusEligible;
 
+    @FindBy(partialLinkText = "Quick Shipping")
+    private WebElement QuickShipping;
+
+    @FindBy(xpath = "//select[@class='appearance-none bg-none border-gray-400 rounded border-solid border box-border p-0 pl-2 pr-10 relative inset-0']")
+    private WebElement DropDown;
+
+    @FindBy(xpath = "//button[@data-testid='clear-filters']")
+    private WebElement ClearFilter;
+
+
 
 
     public void NavigateLockersPage(){
