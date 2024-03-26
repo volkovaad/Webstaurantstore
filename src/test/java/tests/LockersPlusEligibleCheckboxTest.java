@@ -20,5 +20,10 @@ public class LockersPlusEligibleCheckboxTest extends TestBase{
         LockersPage.getPlusEligible().click();
         Assert.assertTrue(true, "Plus Eligible Checkbox is successfully checked");
 
+        logger.info("Verify Quick Shipping Checkbox");
+        Thread.sleep(1000);
+        LockersPage.getQuickShipping().click();
+        Assert.assertTrue(true, "Quick Shipping Checkbox is successfully checked");
+
     }
 }
