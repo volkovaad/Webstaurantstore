@@ -1,6 +1,7 @@
 package pages;
 
 import lombok.Data;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -35,6 +36,18 @@ public class Lockers {
 
     @FindBy(xpath = "//button[@data-testid='clear-filters']")
     private WebElement ClearFilter;
+
+    @FindBy(css = "button[data-original-title='Compare up to 4 products']")
+    private WebElement CompareProducts;
+
+    @FindBy(xpath = "(//button[@data-testid='isCompared'])[1]")
+    private WebElement CompareProduct1;
+
+    @FindBy(xpath = "(//button[@data-testid='isCompared'])[2]")
+    private WebElement CompareProduct2;
+
+    @FindBy(id = "product-compare-results")
+    private WebElement CompareProductsResult;
 
 
 
