@@ -1,5 +1,7 @@
 package tests;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -10,6 +12,8 @@ import utilities.CSVReader;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class CreateAccountTest extends TestBase {
@@ -40,5 +44,27 @@ public class CreateAccountTest extends TestBase {
         Random random = new Random();
         int randomIndex = random.nextInt(allData.length);
         return new Object[][] { allData[randomIndex] };
+    }
+
+
+    @Test(groups = "advanced")
+    public void companyTypeDropdown(){
+        logger.info("Testing available Company Types ");
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+        CreatingAcc createNewAcc = new CreatingAcc();
+        createNewAcc.creatingAcc();
+        Select dropdownCompany = new Select(createNewAcc.getCompanyType());
+        List<WebElement> listOfTypes = dropdownCompany.getOptions();
+
+        List<String> expectedCompanyTypes = createNewAcc.getExpectedCompanyTypes();
+        List<String> actualCompanyTypes  = new ArrayList<>();
+        for(WebElement actualType : listOfTypes) {
+        actualCompanyTypes.add(actualType.getText());
+        }
+//         System.out.println(expectedCompanyTypes);
+//         System.out.println(actualCompanyTypes);
+
+       Assert.assertEquals(actualCompanyTypes, expectedCompanyTypes);
+
     }
 }

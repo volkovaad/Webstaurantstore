@@ -2,15 +2,19 @@ package pages;
 
 import lombok.Data;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ConfigReader;
 import utilities.Driver;
 
+import java.time.Duration;
+
 @Data
 public class LogIn {
-    public LogIn(){
+    public LogIn() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -23,10 +27,10 @@ public class LogIn {
     @FindBy(id = "email")
     private WebElement usernameField;
 
-    @FindBy (id = "password")
+    @FindBy(id = "password")
     private WebElement passwordField;
 
-    @FindBy (id = "the_login_button")
+    @FindBy(id = "the_login_button")
     private WebElement loginButton;
 
 
@@ -47,18 +51,21 @@ public class LogIn {
     }
 
 
-    public void signIn(){
-    signInButton.click();
-    signIndrop.click();
+    public void signIn() {
+        signInButton.click();
+        signIndrop.click();
     }
 
-    public void login(String username, String password){
+    public void login(String username, String password) {
         usernameField.sendKeys(username, Keys.TAB, password, Keys.TAB);
         loginButton.click();
     }
 
     public void login() {
-        usernameField.sendKeys("candali.alina@gmail.com", Keys.TAB, "696XR3d_fTbf9W!", Keys.ENTER);
+        usernameField.sendKeys("verojv@gnmail.com", Keys.TAB, "!pYTvG2ma3_bF&$", Keys.ENTER);
     }
+
+
+
 
 }

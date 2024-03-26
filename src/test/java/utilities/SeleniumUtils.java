@@ -162,4 +162,16 @@ public class SeleniumUtils {
         JavascriptExecutor js=  (JavascriptExecutor)Driver.getDriver();
         js.executeScript("window.scrollBy("+x+","+y+");");
     }
+
+    public static void switchToWindowByURL(String targetURL) {
+        String origin = Driver.getDriver().getWindowHandle();
+        for (String handle : Driver.getDriver().getWindowHandles()) {
+            Driver.getDriver().switchTo().window(handle);
+            if (Driver.getDriver().getCurrentUrl().equals(targetURL)) {
+                return;
+            }
+        }
+        Driver.getDriver().switchTo().window(origin);
+    }
+
 }
