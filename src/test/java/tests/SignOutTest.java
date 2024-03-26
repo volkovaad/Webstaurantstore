@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class SignOutTest extends TestBase {
 
-    @Test(groups = "smoke")
+    @Test
     public void signOut() throws  InterruptedException {
 
         logger.info("Signing out");

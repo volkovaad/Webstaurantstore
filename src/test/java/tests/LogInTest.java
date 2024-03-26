@@ -16,7 +16,7 @@ import java.time.Duration;
 
 public class LogInTest extends TestBase {
 
-    @Test(groups = "smoke")
+    @Test
     public void testValidCredentials() throws  InterruptedException {
 
         logger.info("Signing in with valid Credentials");

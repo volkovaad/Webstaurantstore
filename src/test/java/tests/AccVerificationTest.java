@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class AccVerificationTest extends TestBase {
 
-    @Test(groups = "smoke")
+    @Test
     public void accountVerification() throws  InterruptedException {
 
         logger.info("Account's holder Name Verification");
