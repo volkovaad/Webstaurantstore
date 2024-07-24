@@ -22,7 +22,10 @@ public class CreatingAcc {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//li[@class='list-none relative']//span[@class='flex items-center text-sm leading-none']")
+    @FindBy(xpath = "//span[@class='flex items-center text-sm leading-none']")
+    private WebElement acc;
+
+    @FindBy(xpath = "//a[@data-testid='global-header-sign-in-dropdown']")
     private WebElement signIn;
 
     @FindBy(xpath = "//a[@href='/myaccount.html?goto=register']")
@@ -59,7 +62,8 @@ public class CreatingAcc {
     private WebElement complete;
 
     public void creatingAcc() {
-        signIn.click();
+        acc.click();
+     //   signIn.click();
         createNew.click();
     }
 

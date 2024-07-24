@@ -21,7 +21,6 @@ import java.time.Duration;
 
 public class TestBase {
 
-
     protected static ExtentReports extentReports;
     protected static ExtentSparkReporter htmlReport;
     protected static ExtentTest logger;
@@ -36,14 +35,11 @@ public class TestBase {
         extentReports.setSystemInfo("OS", System.getProperty("os.name"));
         extentReports.setSystemInfo("Browser", System.getProperty("browser") == null ? ConfigReader.getProperty("browser") : System.getProperty("browser"));
         extentReports.setSystemInfo("Homepage", ConfigReader.getProperty("url"));
-
     }
 
     @AfterSuite (alwaysRun = true)
     public void tearDownSuite(){
-
         extentReports.flush();
-
     }
     @BeforeMethod (alwaysRun = true)
     public void setup(Method method){
@@ -51,7 +47,6 @@ public class TestBase {
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         logger = extentReports.createTest("TEST: " + method.getName());
         logger.info("TEST STARTED: " + method.getName());
-
     }
 
     @AfterMethod (alwaysRun = true)
@@ -68,7 +63,5 @@ public class TestBase {
             String pathOfTheScreenshotFile = SeleniumUtils.getScreenshot("failed");
             logger.addScreenCaptureFromPath(pathOfTheScreenshotFile);
         }
-
         Driver.quitDriver();
-    }
-}
+    }}

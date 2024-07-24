@@ -10,15 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
 
-/**
- * This class represents singleton WebDriver object, use this class's getDriver method everywhere in this
- * framework when you need a driver object
- */
 public class Driver {
-
-
-
-
 
     public static ThreadLocal<WebDriver> drivers = new ThreadLocal<>();
 
@@ -33,9 +25,6 @@ public class Driver {
             if(browserType == null){ // if no browser is passed in command line
                 browserType = ConfigReader.getProperty("browser").toLowerCase(); // use the one in config properties
             }
-
-
-
 
             switch (browserType){
                 case "chrome" -> drivers.set(new ChromeDriver());
